@@ -6,10 +6,10 @@ function App() {
   const [height, setHeight] = useState(" ");
   const [bmi, setBmi] = useState("");
   const [message, setMessage] = useState("");
-  // const [show,setShow]=useState([])
+ 
 
   let calcBmi = (event) => {
-    //prevent submitting
+   
     event.preventDefault();
 
     if (weight === 0 || height === 0 || weight<0 || height<0) {
@@ -19,7 +19,7 @@ function App() {
       let bmi = (weight / ((height/100) * (height/100)));
       setBmi(bmi.toFixed(1));
 
-      // Logic for message
+    
 
       if (bmi < 18.5) {
         setMessage("You are underweight");
@@ -33,9 +33,7 @@ function App() {
       }
     }
 
-    // const newvalue = {value:bmi};
-    // const updated = [...show,newvalue];
-    // setShow(updated);
+ 
 
   };
 
@@ -80,9 +78,7 @@ function App() {
 
        
 
-        {/* <div className="img-container">
-          
-        </div> */}
+      
       </div>
     </div>
   );
